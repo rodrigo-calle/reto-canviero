@@ -1,0 +1,27 @@
+@import '../../../colors';
+
+.navbar-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    height: 60px;
+    padding: 0px 30px;
+    background-color: $whiteColor;
+    border-bottom: 2px solid rgb(194, 193, 193);
+    align-items: center;
+
+    .navbar-container__logo {
+        height: 45px;
+        width: 45px;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .navbar-container {
+        padding: 0;
+        img {
+            margin-left: 20px;
+        }
+    }
+  }

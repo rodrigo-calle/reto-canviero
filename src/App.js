@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './App.scss';
+import AddCharacter from './components/characters/AddCharacter';
+import CharacterDetail from './components/characters/CharacterDetail';
+import Characters from './components/characters/Characters';
+import EditCharacter from './components/characters/EditCharacter';
+import NavBar from './components/navBar/NavBar';
+import { CharacterProvider } from './context/CharacterContext';
+import Dashboard from './pages/dashboard/Dashboard';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <BrowserRouter>
+      <CharacterProvider>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Dashboard />} >
+            <Route path="/" element={< Characters />} />
+            <Route path="detail/:id" element={<CharacterDetail />} />
+            <Route path="add-character" element={<AddCharacter/> } />
+            <Route path="edit-character/:id" element={<EditCharacter />}/>
+          </Route>
+          </Routes>
+      </CharacterProvider>
+
+    </BrowserRouter>
+      {/* <header className="App-header">
+        <img src="/images/canvia-c.svg" className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Canvia Prueba Técnica
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </header> */}
     </div>
   );
 }

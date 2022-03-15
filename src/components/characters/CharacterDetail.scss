@@ -1,0 +1,64 @@
+@import '../../../colors';
+.main-title-detail {
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+    align-items: center;
+    margin-top: 50px;
+    span {
+        background-color: $orangeColor;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        svg {
+            color: $whiteColor;
+        }
+    }
+}
+
+
+.character-detail-container {
+    display: flex;
+    flex-direction: row;
+    background-color: $whiteColor ;
+    margin: 10px auto;
+    border-radius: 14px;
+    width: fit-content;
+    justify-content: space-around;
+
+    .character-picture-container {
+        background-color: $blueColor;
+        border-radius: 10% 30% 50% 70%;
+        margin-right: 15px;
+        
+        img {
+            border-radius: 10% 30% 50% 70%;
+        }
+    }
+    .character-description-container {
+        background-color: $orangeColor;
+        border-radius: 25% 10%;
+        padding: 30px;
+        color: $whiteColor;
+        span {
+            width: fit-content;
+            background-color: $blueColor;
+            padding: 4px;
+            border-radius: 7px;
+            margin: 5px auto;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .character-detail-container {
+     flex-direction: column;
+     padding: 8px;
+    }
+    .character-picture-container {
+        margin-bottom: 5px;
+    }
+}
+  

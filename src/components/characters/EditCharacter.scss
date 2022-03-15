@@ -1,0 +1,70 @@
+@import "../../../colors";
+
+.edit-character-container-dashboard {
+    border-radius: 7px;
+    .title-edit-character {
+        display: flex;
+        width: 90%;
+        margin: 20px auto;
+        align-items: center;
+        margin-top: 50px;
+        
+        span {
+            background-color: $orangeColor;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            svg {
+                color: $whiteColor;
+            }
+        }
+    }
+
+    .form-container-edit-character {
+        width: 100%;
+        margin: 0 auto;
+        overflow: auto;
+        height: 70vh;
+        padding-bottom: 35px;
+        .container-form {
+            margin: 0px auto;
+            background-color: $whiteColor;
+            width: 70%;
+            padding: 25px;
+            border-radius: 7px;
+
+            .label-edit-character-form {
+        
+                .input-text-edit-character-form {
+                    width: 100%;
+                    margin: 8px auto;
+                    height: 30px;
+                    padding: 0;
+                    border-radius: 7px;
+                    border: thin solid rgb(204, 204, 204);
+                    outline:rgb(204, 204, 204);
+                    &:focus {
+                        outline: none ;
+                        border: thin solid rgb(204, 204, 204);
+                        box-shadow: 0 0 5px $orangeColor;
+                      }
+                }
+            }
+        }
+    }
+    .container-submit-btn-edit-character-dashboard {
+        width: 70%;
+        text-align: right;
+        margin: 0 auto;
+        button {
+          color: $whiteColor;
+          background-color: $orangeColor;
+          padding: 10px 15px;
+          border-radius: 7px;
+          border: none;
+          cursor: pointer;
+        }
+    }
+    
+}

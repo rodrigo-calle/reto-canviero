@@ -1,0 +1,103 @@
+@import "../../../colors";
+
+tbody, td, tfoot, th, thead, tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+.title-character-list {
+    text-align: left;
+    width: 90%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+
+.characters-container {
+    width: 90%;
+    background-color: $whiteColor;
+    border-radius: 7px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    border-radius: 14px;
+    margin: 0 auto;
+    .btn-container {
+        width: 90%;
+        margin: 10px auto;
+        display: flex;
+        justify-content: flex-start;
+
+        button {
+            background-color: $orangeColor;
+            color: $whiteColor;
+            font-size: 16px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+    }
+
+    .characters-dashboard-table {
+        width: 90%;
+        margin: 0 auto;
+
+        .header-table-characters {
+            background-color: #eef2f7;
+            border-width: 0;
+            border-bottom: 1px solid #313a46;
+            tr{
+              border-width: 0;
+              th{
+                border-width: 0;
+                padding: 15px 30px 15px 15px;
+                font-size: 14px;
+                color: #313a46 ;
+              }
+            }
+        }
+
+        tbody {
+            background-color: #fafbfe;
+            tr {
+              td {
+                text-align: center;
+                button {
+                  cursor: pointer;
+                  border: none;
+                  border-radius: 7px;
+                  color: #fff;
+                }
+                .btn-detail {
+                  background-color: $orangeColor;
+                }
+                .btn-edit {
+                  background-color: $blueColor;
+                }
+                .btn-delete {
+                  background-color: #ff0000;
+                }
+
+                img {
+                    height: 100px;
+                    width: 100px;
+                }
+
+              }
+            }
+          }
+    }
+    .pagination-container {
+      text-align: center;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+  .characters-container {
+    width: fit-content;
+    padding: 20px;
+  }
+  .column-to-ocult {
+    display: none;
+  }
+}
+
